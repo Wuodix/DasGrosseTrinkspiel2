@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DasGrosseTrinkspiel2"
-             x:Class="DasGrosseTrinkspiel2.MainPage">
+             x:Class="DasGrosseTrinkspiel2.Views.MainPage">
 
     <StackLayout BackgroundColor="{StaticResource PrimaryBackground}" Spacing="30">
         <Grid>
@@ -10,10 +10,10 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Frame Grid.Row="0" BackgroundColor="{StaticResource PrimaryBackground}">
+            <Frame Grid.Row="0" BackgroundColor="Transparent">
                 <Label Text="Das Große Trinkspiel" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
             </Frame>
-            <Frame Grid.Row="1" BackgroundColor="{StaticResource PrimaryBackground}">
+            <Frame Grid.Row="1" BackgroundColor="Transparent">
                 <Image Source="{local:ImageResource DasGrosseTrinkspiel2.Images.Logo.jpg}" />
             </Frame>
         </Grid>
@@ -27,26 +27,31 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="20" />
             </Grid.RowDefinitions>
-            <Button Text="Spiele"
-                        FontSize="27"
-                        HeightRequest="60"
-                        BackgroundColor="{StaticResource ButtonColor1}"
-                        TextColor="White" 
-                        Grid.Row="1" />
-            <Button Text="Spiele"
+            <Button Text="Spieler"
+                        x:Name="m_btnSpieler"
                         FontSize="27"
                         HeightRequest="60"
                         BackgroundColor="{StaticResource ButtonColor1}"
                         TextColor="White"
-                        Grid.Row="2" />
-            <Button Text="Spiele"
+                        Grid.Row="1" 
+                        Clicked="m_btnSpieler_Clicked"/>
+            <Button Text="Spiele" x:Name="m_btnSpiele"
                         FontSize="27"
                         HeightRequest="60"
                         BackgroundColor="{StaticResource ButtonColor1}"
                         TextColor="White" 
-                        Grid.Row="3" />
-            <Button Text="Spiele"
+                        Grid.Row="2" 
+                        Clicked="m_btnSpiele_Clicked"/>
+            <Button Text="Zufallsgenerator"
+                        x:Name="m_btnRandom"
                         FontSize="27"
+                        HeightRequest="60"
+                        BackgroundColor="{StaticResource ButtonColor1}"
+                        TextColor="White" 
+                        Grid.Row="3" 
+                        Clicked="m_btnRandom_Clicked"/>
+            <Button Text="Darf ich schon wieder Autofahren?"
+                        FontSize="18"
                         HeightRequest="60"
                         BackgroundColor="{StaticResource ButtonColor1}"
                         TextColor="White" 

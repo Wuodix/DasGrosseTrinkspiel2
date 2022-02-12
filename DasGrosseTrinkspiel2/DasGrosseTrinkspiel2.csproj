@@ -24,4 +24,22 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\RandomMenu.xaml.cs">
+      <DependentUpon>RandomMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GamesMenu.xaml.cs">
+      <DependentUpon>GamesMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\SpielerMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
