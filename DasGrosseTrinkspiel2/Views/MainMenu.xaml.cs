@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.Diagnostics;
 
 namespace DasGrosseTrinkspiel2.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class MainMenu : ContentPage
     {
-        public MainPage()
+        public MainMenu()
         {
             InitializeComponent();
         }
@@ -28,6 +29,7 @@ namespace DasGrosseTrinkspiel2.Views
         private void m_btnSpieler_Clicked(object sender, EventArgs e)
         {
             App.Current.MainPage = new SpielerMenu();
+            Debug.WriteLine("jetzt");
         }
     }
 }

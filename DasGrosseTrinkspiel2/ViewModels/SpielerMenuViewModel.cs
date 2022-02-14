@@ -14,9 +14,10 @@ namespace DasGrosseTrinkspiel2.ViewModels
         {
             Gamers = new ObservableCollection<Classes.Spieler>();
             Genders = new ObservableCollection<string>();
-            //Googeln was ObservableCollection ist
-            Genders[0] = "Männlich";
-            Genders[1] = "Weiblich";
+
+            Genders.Add("Männlich");
+            Genders.Add("Weiblich");
+            Genders.Add("Divers");
         }
     }
 }

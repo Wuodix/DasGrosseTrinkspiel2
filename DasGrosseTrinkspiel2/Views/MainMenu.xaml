@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DasGrosseTrinkspiel2"
-             x:Class="DasGrosseTrinkspiel2.Views.MainPage">
+             x:Class="DasGrosseTrinkspiel2.Views.MainMenu">
 
     <StackLayout BackgroundColor="{StaticResource PrimaryBackground}" Spacing="30">
         <Grid>

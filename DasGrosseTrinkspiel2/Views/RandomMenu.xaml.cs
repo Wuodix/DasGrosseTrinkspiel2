@@ -18,7 +18,7 @@ namespace DasGrosseTrinkspiel2.Views
 
         private void m_btnBack_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new MainPage();
+            App.Current.MainPage = new MainMenu();
         }
     }
 }

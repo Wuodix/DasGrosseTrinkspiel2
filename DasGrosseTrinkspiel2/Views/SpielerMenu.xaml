@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DasGrosseTrinkspiel2.Views.SpielerMenu">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="{StaticResource PrimaryBackground}">
             <Label Text="Spieler" 
                 TextColor="White"
                 FontSize="50"
@@ -13,24 +13,27 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="7"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Entry Grid.Column="0" Grid.Row="0"/>
+                <Entry Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" WidthRequest="50"/>
                 <Picker Title="Geschlecht" ItemsSource="{Binding Genders}" SelectedItem="Männlich" 
-                        Grid.Column="1"
-                        Grid.Row="0"/>
-                <Button Text="Hinzufügen" Grid.Row="0" Grid.Column="2" />
-                <CollectionView Grid.ColumnSpan="3" Grid.Row="1" ItemsSource="{Binding Gamers}">
+                        Grid.Column="0"
+                        Grid.Row="1"/>
+                <Button Text="Hinzufügen" Grid.Row="1" Grid.Column="1" />
+                <CollectionView Grid.ColumnSpan="2" Grid.Row="2" ItemsSource="{Binding Gamers}" BackgroundColor="{StaticResource GridColor1}">
                     
                 </CollectionView>
             </Grid>
+            <StackLayout.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped" />
+            </StackLayout.GestureRecognizers>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
