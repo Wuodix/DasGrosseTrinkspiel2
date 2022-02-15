@@ -13,11 +13,12 @@ namespace DasGrosseTrinkspiel2.ViewModels
         public SpielerMenuViewModel()
         {
             Gamers = new ObservableCollection<Classes.Spieler>();
-            Genders = new ObservableCollection<string>();
-
-            Genders.Add("Männlich");
-            Genders.Add("Weiblich");
-            Genders.Add("Divers");
+            Genders = new ObservableCollection<string>
+            {
+                "Männlich",
+                "Weiblich",
+                "Divers"
+            };
         }
     }
 }

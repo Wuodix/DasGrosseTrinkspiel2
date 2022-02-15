@@ -12,12 +12,11 @@ namespace DasGrosseTrinkspiel2.Views
 {
     public partial class SpielerMenu : ContentPage
     {
-        ViewModels.SpielerMenuViewModel viewModel;
         public SpielerMenu()
         {
             InitializeComponent();
             
-            BindingContext = viewModel = new ViewModels.SpielerMenuViewModel();
+            BindingContext = new ViewModels.SpielerMenuViewModel();
         }
 
         private void OnSwiped(object sender, SwipedEventArgs e)

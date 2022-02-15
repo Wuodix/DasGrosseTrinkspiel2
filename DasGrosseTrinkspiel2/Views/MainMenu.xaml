@@ -51,7 +51,7 @@
                         Grid.Row="3" 
                         Clicked="m_btnRandom_Clicked"/>
             <Button Text="Darf ich schon wieder Autofahren?"
-                        FontSize="18"
+                        FontSize="16"
                         HeightRequest="60"
                         BackgroundColor="{StaticResource ButtonColor1}"
                         TextColor="White" 
