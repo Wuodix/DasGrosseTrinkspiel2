@@ -12,11 +12,12 @@ namespace DasGrosseTrinkspiel2.Views
 {
     public partial class SpielerMenu : ContentPage
     {
+        ViewModels.SpielerMenuViewModel viewModel;
         public SpielerMenu()
         {
             InitializeComponent();
             
-            BindingContext = new ViewModels.SpielerMenuViewModel();
+            BindingContext = viewModel = new ViewModels.SpielerMenuViewModel();
         }
 
         private void OnSwiped(object sender, SwipedEventArgs e)
@@ -28,6 +29,25 @@ namespace DasGrosseTrinkspiel2.Views
                     App.Current.MainPage = new MainMenu();
                     break;
             }
+        }
+
+        private void m_btnAdd_Clicked(object sender, EventArgs e)
+        {
+            if(m_tbxName.Text != null && m_cmbxGender.SelectedItem != null)
+            {
+                Classes.Spieler spieler = new Classes.Spieler();
+                spieler.Name = m_tbxName.Text;
+                spieler.Geschlecht = m_cmbxGender.SelectedItem.ToString();
+
+                viewModel.Gamers.Add(spieler);
+            }
+        }
+
+        private void m_btnDelete_Clicked(object sender, EventArgs e)
+        {
+            Debug.WriteLine(sender.ToString());
+            Debug.WriteLine("hi");
+            m_lbxSpieler.FindByName(sender.ToString());
         }
     }
 }

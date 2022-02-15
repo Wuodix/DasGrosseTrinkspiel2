@@ -1,17 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DasGrosseTrinkspiel2.Views.RandomMenu">
+             x:Class="DasGrosseTrinkspiel2.Views.RandomMenu"
+             xmlns:local="clr-namespace:DasGrosseTrinkspiel2.Extentions">
     <ContentPage.Content>
-        <RelativeLayout BackgroundColor="{StaticResource PrimaryBackground}" Padding="0,20,0,20">
-            <Label Text="Zufallsgeneratoren" 
+        <local:SwipeContainer Swipe="OnSwiped">
+            <RelativeLayout BackgroundColor="{StaticResource PrimaryBackground}" Padding="0,20,0,20">
+                <Label Text="Zufallsgeneratoren" 
                         TextColor="White"
-                        FontSize="37"
+                        FontSize="35"
                         HorizontalOptions="Center"
                         Padding="0,28,0,0"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"/>
-            <Button Text="Zufallsrad"
+                <Button Text="Zufallsrad"
                         Margin="20,0,20,0"
                         TextColor="White"
                         FontSize="27"
@@ -20,16 +22,16 @@
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.15}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         />
-            <Button Text="Zufalls Team Generator"
+                <Button Text="Zufalls Team Generator"
                         Margin="20,0,20,0"
                         TextColor="White"
-                        FontSize="25"
+                        FontSize="24"
                         BackgroundColor="{StaticResource ButtonColor1}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.0}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         />
-            <Button Text="Zufallszahl"
+                <Button Text="Zufallszahl"
                         Margin="20,0,20,0"
                         TextColor="White"
                         FontSize="27"
@@ -38,7 +40,7 @@
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.35}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         />
-            <Button Text="Würfel"
+                <Button Text="Würfel"
                         Margin="20,0,20,0"
                         TextColor="White"
                         FontSize="27"
@@ -47,7 +49,7 @@
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.35}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         />
-            <Button Text="Back"
+                <Button Text="Back"
                         x:Name="m_btnBack"
                         Clicked="m_btnBack_Clicked"
                         TextColor="White"
@@ -56,6 +58,7 @@
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.03}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.92}"
                         />
-        </RelativeLayout>
+            </RelativeLayout>
+        </local:SwipeContainer>
     </ContentPage.Content>
 </ContentPage>

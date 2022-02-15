@@ -8,5 +8,10 @@ namespace DasGrosseTrinkspiel2.Classes
     {
         public string Name { get; set; }
         public string Geschlecht { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

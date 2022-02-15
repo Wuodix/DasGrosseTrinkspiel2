@@ -20,5 +20,15 @@ namespace DasGrosseTrinkspiel2.Views
         {
             App.Current.MainPage = new MainMenu();
         }
+
+        private void OnSwiped(object sender, SwipedEventArgs e)
+        {
+            switch (e.Direction)
+            {
+                case SwipeDirection.Right:
+                    App.Current.MainPage = new MainMenu();
+                    break;
+            }
+        }
     }
 }
