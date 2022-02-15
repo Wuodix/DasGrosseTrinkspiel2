@@ -10,7 +10,7 @@ namespace DasGrosseTrinkspiel2
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Views.MainMenu();
         }
 
         protected override void OnStart()
