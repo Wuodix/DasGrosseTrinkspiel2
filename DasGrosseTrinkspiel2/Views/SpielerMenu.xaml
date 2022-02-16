@@ -52,7 +52,7 @@
                                            Grid.Column="0"/>
                                     <Button Text="X"
                                             x:Name="m_btnDelete"
-                                            FontSize="30"
+                                            FontSize="20"
                                             Grid.Column="1"
                                             BackgroundColor="Transparent"
                                             Clicked="m_btnDelete_Clicked"/>

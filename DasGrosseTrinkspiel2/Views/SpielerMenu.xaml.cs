@@ -40,14 +40,33 @@ namespace DasGrosseTrinkspiel2.Views
                 spieler.Geschlecht = m_cmbxGender.SelectedItem.ToString();
 
                 viewModel.Gamers.Add(spieler);
+
+                m_tbxName.Text = null;
+                m_cmbxGender.SelectedItem = null;
             }
         }
 
         private void m_btnDelete_Clicked(object sender, EventArgs e)
         {
-            Debug.WriteLine(sender.ToString());
-            Debug.WriteLine("hi");
-            m_lbxSpieler.FindByName(sender.ToString());
+            Button button = sender as Button;
+            Grid grid = button.Parent as Grid;
+            Label label = grid.Children[0] as Label;
+            string text = label.Text;
+
+            viewModel.Gamers.Remove(FindSpieler(text));
+        }
+
+        private Classes.Spieler FindSpieler(string name)
+        {
+            foreach(Classes.Spieler spieler in viewModel.Gamers)
+            {
+                if(spieler.Name == name)
+                {
+                    return spieler;
+                }
+            }
+
+            return null;
         }
     }
 }
